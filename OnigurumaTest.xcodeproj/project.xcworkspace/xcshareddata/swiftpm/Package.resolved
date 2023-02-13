@@ -1,0 +1,14 @@
+{
+  "pins" : [
+    {
+      "identity" : "swiftoniguruma",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/AuroraEditor/SwiftOniguruma",
+      "state" : {
+        "branch" : "main",
+        "revision" : "87bc069d39d698286fc33ced1f91fccfec73e04e"
+      }
+    }
+  ],
+  "version" : 2
+}

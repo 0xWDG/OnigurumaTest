@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="21507"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Application-->
+        <scene sceneID="JPo-4y-FX3">
+            <objects>
+                <application id="hnw-xV-0zn" sceneMemberID="viewController">
+                    <menu key="mainMenu" title="Main Menu" systemMenu="main" id="AYu-sK-qS6">
+                        <items>
+                            <menuItem title="OnigurumaTest" id="1Xt-HY-uBw">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                                <menu key="submenu" title="OnigurumaTest" systemMenu="apple" id="uQy-DD-JDr">
+                                    <items>
+                                        <menuItem title="About OnigurumaTest" id="5kV-Vb-QxS">
+                                            <modifierMask key="keyEquivalentModifierMask"/>
+                                            <connections>
+                                                <action selector="orderFrontStandardAboutPanel:" target="Ady-hI-5gd" id="Exp-CZ-Vem"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem isSeparatorItem="YES" id="kCx-OE-vgT"/>
+                                        <menuItem title="Quit OnigurumaTest" keyEquivalent="q" id="4sb-4s-VLi">
+                                            <connections>
+                                                <action selector="terminate:" target="Ady-hI-5gd" id="Te7-pn-YzF"/>
+                                            </connections>
+                                        </menuItem>
+                                    </items>
+                                </menu>
+                            </menuItem>
+                        </items>
+                    </menu>
+                    <connections>
+                        <outlet property="delegate" destination="Voe-Tx-rLC" id="PrD-fu-P6m"/>
+                    </connections>
+                </application>
+                <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="OnigurumaTest" customModuleProvider="target"/>
+                <customObject id="YLy-65-1bz" customClass="NSFontManager"/>
+                <customObject id="Ady-hI-5gd" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="75" y="0.0"/>
+        </scene>
+        <!--Window Controller-->
+        <scene sceneID="R2V-B0-nI4">
+            <objects>
+                <windowController id="B8D-0N-5wS" sceneMemberID="viewController">
+                    <window key="window" title="Oniguruma Tester" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" animationBehavior="default" id="IQv-IB-iLA">
+                        <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
+                        <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
+                        <rect key="contentRect" x="196" y="240" width="480" height="270"/>
+                        <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1027"/>
+                        <connections>
+                            <outlet property="delegate" destination="B8D-0N-5wS" id="98r-iN-zZc"/>
+                        </connections>
+                    </window>
+                    <connections>
+                        <segue destination="XfG-lQ-9wD" kind="relationship" relationship="window.shadowedContentViewController" id="cq2-FE-JQM"/>
+                    </connections>
+                </windowController>
+                <customObject id="Oky-zY-oP4" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="75" y="250"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="hIz-AP-VOD">
+            <objects>
+                <viewController id="XfG-lQ-9wD" customClass="ViewController" customModule="OnigurumaTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" id="m2S-Jp-Qdl">
+                        <rect key="frame" x="0.0" y="0.0" width="750" height="500"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <box horizontalHuggingPriority="750" boxType="separator" translatesAutoresizingMaskIntoConstraints="NO" id="pbY-9Y-fhd">
+                                <rect key="frame" x="373" y="0.0" width="5" height="500"/>
+                            </box>
+                            <scrollView horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" translatesAutoresizingMaskIntoConstraints="NO" id="agL-IH-gTJ">
+                                <rect key="frame" x="0.0" y="0.0" width="376" height="500"/>
+                                <clipView key="contentView" drawsBackground="NO" id="qkY-9X-otj">
+                                    <rect key="frame" x="1" y="1" width="374" height="498"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <textView wantsLayer="YES" importsGraphics="NO" richText="NO" verticallyResizable="YES" spellingCorrection="YES" smartInsertDelete="YES" id="SCj-5N-NP9">
+                                            <rect key="frame" x="0.0" y="0.0" width="374" height="498"/>
+                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                            <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                            <size key="minSize" width="374" height="498"/>
+                                            <size key="maxSize" width="498" height="10000000"/>
+                                            <color key="insertionPointColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                        </textView>
+                                    </subviews>
+                                </clipView>
+                                <scroller key="horizontalScroller" wantsLayer="YES" verticalHuggingPriority="750" horizontal="YES" id="5Ac-ar-jcy">
+                                    <rect key="frame" x="1" y="483" width="374" height="16"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </scroller>
+                                <scroller key="verticalScroller" wantsLayer="YES" verticalHuggingPriority="750" horizontal="NO" id="syy-Be-BiK">
+                                    <rect key="frame" x="359" y="1" width="16" height="498"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </scroller>
+                            </scrollView>
+                            <scrollView horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" translatesAutoresizingMaskIntoConstraints="NO" id="hUz-5a-Zu9">
+                                <rect key="frame" x="375" y="0.0" width="375" height="500"/>
+                                <clipView key="contentView" drawsBackground="NO" id="nlb-tB-X7g">
+                                    <rect key="frame" x="1" y="1" width="373" height="498"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <textView wantsLayer="YES" importsGraphics="NO" richText="NO" verticallyResizable="YES" spellingCorrection="YES" smartInsertDelete="YES" id="n9z-A6-paI">
+                                            <rect key="frame" x="0.0" y="0.0" width="373" height="498"/>
+                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                            <size key="minSize" width="373" height="498"/>
+                                            <size key="maxSize" width="373" height="10000000"/>
+                                            <color key="insertionPointColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                        </textView>
+                                    </subviews>
+                                </clipView>
+                                <scroller key="horizontalScroller" wantsLayer="YES" verticalHuggingPriority="750" horizontal="YES" id="uYy-nV-Q6R">
+                                    <rect key="frame" x="1" y="483" width="373" height="16"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </scroller>
+                                <scroller key="verticalScroller" wantsLayer="YES" verticalHuggingPriority="750" horizontal="NO" id="FY7-Ha-Xau">
+                                    <rect key="frame" x="358" y="1" width="16" height="498"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </scroller>
+                            </scrollView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="hUz-5a-Zu9" firstAttribute="top" secondItem="pbY-9Y-fhd" secondAttribute="top" id="1ZQ-8m-Hwa"/>
+                            <constraint firstItem="agL-IH-gTJ" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" id="3MM-C3-MmX"/>
+                            <constraint firstItem="agL-IH-gTJ" firstAttribute="trailing" secondItem="pbY-9Y-fhd" secondAttribute="trailing" id="4lx-4N-875"/>
+                            <constraint firstItem="pbY-9Y-fhd" firstAttribute="centerX" secondItem="m2S-Jp-Qdl" secondAttribute="centerX" id="9Fz-dg-DbT"/>
+                            <constraint firstAttribute="trailing" secondItem="hUz-5a-Zu9" secondAttribute="trailing" id="Cwk-na-cGn"/>
+                            <constraint firstAttribute="bottom" secondItem="agL-IH-gTJ" secondAttribute="bottom" id="HnQ-Jt-vQP"/>
+                            <constraint firstItem="agL-IH-gTJ" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" id="PKm-xq-Sbh"/>
+                            <constraint firstItem="agL-IH-gTJ" firstAttribute="top" secondItem="pbY-9Y-fhd" secondAttribute="top" id="Pda-YE-Yye"/>
+                            <constraint firstItem="pbY-9Y-fhd" firstAttribute="leading" secondItem="hUz-5a-Zu9" secondAttribute="leading" id="R8h-ox-Ga6"/>
+                            <constraint firstItem="agL-IH-gTJ" firstAttribute="bottom" secondItem="pbY-9Y-fhd" secondAttribute="bottom" id="bP9-5k-rd3"/>
+                            <constraint firstItem="hUz-5a-Zu9" firstAttribute="bottom" secondItem="pbY-9Y-fhd" secondAttribute="bottom" id="qwQ-S5-NoS"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="textViewCode" destination="SCj-5N-NP9" id="Gcd-VL-R6i"/>
+                        <outlet property="textViewOutput" destination="n9z-A6-paI" id="6DK-hD-9q0"/>
+                    </connections>
+                </viewController>
+                <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="75" y="796"/>
+        </scene>
+    </scenes>
+</document>

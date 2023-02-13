@@ -1,0 +1,611 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2B87399E299AC0D6009CEAEC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B87399D299AC0D6009CEAEC /* AppDelegate.swift */; };
+		2B8739A0299AC0D6009CEAEC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B87399F299AC0D6009CEAEC /* ViewController.swift */; };
+		2B8739A2299AC0D7009CEAEC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B8739A1299AC0D7009CEAEC /* Assets.xcassets */; };
+		2B8739A5299AC0D7009CEAEC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B8739A3299AC0D7009CEAEC /* Main.storyboard */; };
+		2B8739B0299AC0D7009CEAEC /* OnigurumaTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B8739AF299AC0D7009CEAEC /* OnigurumaTestTests.swift */; };
+		2B8739BA299AC0D7009CEAEC /* OnigurumaTestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B8739B9299AC0D7009CEAEC /* OnigurumaTestUITests.swift */; };
+		2B8739BC299AC0D7009CEAEC /* OnigurumaTestUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B8739BB299AC0D7009CEAEC /* OnigurumaTestUITestsLaunchTests.swift */; };
+		2B8739CA299AC119009CEAEC /* SwiftOniguruma in Frameworks */ = {isa = PBXBuildFile; productRef = 2B8739C9299AC119009CEAEC /* SwiftOniguruma */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2B8739AC299AC0D7009CEAEC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2B873992299AC0D6009CEAEC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2B873999299AC0D6009CEAEC;
+			remoteInfo = OnigurumaTest;
+		};
+		2B8739B6299AC0D7009CEAEC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2B873992299AC0D6009CEAEC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2B873999299AC0D6009CEAEC;
+			remoteInfo = OnigurumaTest;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		2B87399A299AC0D6009CEAEC /* OnigurumaTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OnigurumaTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2B87399D299AC0D6009CEAEC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		2B87399F299AC0D6009CEAEC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		2B8739A1299AC0D7009CEAEC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2B8739A4299AC0D7009CEAEC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		2B8739A6299AC0D7009CEAEC /* OnigurumaTest.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = OnigurumaTest.entitlements; sourceTree = "<group>"; };
+		2B8739AB299AC0D7009CEAEC /* OnigurumaTestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OnigurumaTestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2B8739AF299AC0D7009CEAEC /* OnigurumaTestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnigurumaTestTests.swift; sourceTree = "<group>"; };
+		2B8739B5299AC0D7009CEAEC /* OnigurumaTestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OnigurumaTestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2B8739B9299AC0D7009CEAEC /* OnigurumaTestUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnigurumaTestUITests.swift; sourceTree = "<group>"; };
+		2B8739BB299AC0D7009CEAEC /* OnigurumaTestUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnigurumaTestUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2B873997299AC0D6009CEAEC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2B8739CA299AC119009CEAEC /* SwiftOniguruma in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2B8739A8299AC0D7009CEAEC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2B8739B2299AC0D7009CEAEC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2B873991299AC0D6009CEAEC = {
+			isa = PBXGroup;
+			children = (
+				2B87399C299AC0D6009CEAEC /* OnigurumaTest */,
+				2B8739AE299AC0D7009CEAEC /* OnigurumaTestTests */,
+				2B8739B8299AC0D7009CEAEC /* OnigurumaTestUITests */,
+				2B87399B299AC0D6009CEAEC /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		2B87399B299AC0D6009CEAEC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2B87399A299AC0D6009CEAEC /* OnigurumaTest.app */,
+				2B8739AB299AC0D7009CEAEC /* OnigurumaTestTests.xctest */,
+				2B8739B5299AC0D7009CEAEC /* OnigurumaTestUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2B87399C299AC0D6009CEAEC /* OnigurumaTest */ = {
+			isa = PBXGroup;
+			children = (
+				2B87399D299AC0D6009CEAEC /* AppDelegate.swift */,
+				2B87399F299AC0D6009CEAEC /* ViewController.swift */,
+				2B8739A1299AC0D7009CEAEC /* Assets.xcassets */,
+				2B8739A3299AC0D7009CEAEC /* Main.storyboard */,
+				2B8739A6299AC0D7009CEAEC /* OnigurumaTest.entitlements */,
+			);
+			path = OnigurumaTest;
+			sourceTree = "<group>";
+		};
+		2B8739AE299AC0D7009CEAEC /* OnigurumaTestTests */ = {
+			isa = PBXGroup;
+			children = (
+				2B8739AF299AC0D7009CEAEC /* OnigurumaTestTests.swift */,
+			);
+			path = OnigurumaTestTests;
+			sourceTree = "<group>";
+		};
+		2B8739B8299AC0D7009CEAEC /* OnigurumaTestUITests */ = {
+			isa = PBXGroup;
+			children = (
+				2B8739B9299AC0D7009CEAEC /* OnigurumaTestUITests.swift */,
+				2B8739BB299AC0D7009CEAEC /* OnigurumaTestUITestsLaunchTests.swift */,
+			);
+			path = OnigurumaTestUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2B873999299AC0D6009CEAEC /* OnigurumaTest */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2B8739BF299AC0D7009CEAEC /* Build configuration list for PBXNativeTarget "OnigurumaTest" */;
+			buildPhases = (
+				2B873996299AC0D6009CEAEC /* Sources */,
+				2B873997299AC0D6009CEAEC /* Frameworks */,
+				2B873998299AC0D6009CEAEC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = OnigurumaTest;
+			packageProductDependencies = (
+				2B8739C9299AC119009CEAEC /* SwiftOniguruma */,
+			);
+			productName = OnigurumaTest;
+			productReference = 2B87399A299AC0D6009CEAEC /* OnigurumaTest.app */;
+			productType = "com.apple.product-type.application";
+		};
+		2B8739AA299AC0D7009CEAEC /* OnigurumaTestTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2B8739C2299AC0D7009CEAEC /* Build configuration list for PBXNativeTarget "OnigurumaTestTests" */;
+			buildPhases = (
+				2B8739A7299AC0D7009CEAEC /* Sources */,
+				2B8739A8299AC0D7009CEAEC /* Frameworks */,
+				2B8739A9299AC0D7009CEAEC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2B8739AD299AC0D7009CEAEC /* PBXTargetDependency */,
+			);
+			name = OnigurumaTestTests;
+			productName = OnigurumaTestTests;
+			productReference = 2B8739AB299AC0D7009CEAEC /* OnigurumaTestTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		2B8739B4299AC0D7009CEAEC /* OnigurumaTestUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2B8739C5299AC0D7009CEAEC /* Build configuration list for PBXNativeTarget "OnigurumaTestUITests" */;
+			buildPhases = (
+				2B8739B1299AC0D7009CEAEC /* Sources */,
+				2B8739B2299AC0D7009CEAEC /* Frameworks */,
+				2B8739B3299AC0D7009CEAEC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2B8739B7299AC0D7009CEAEC /* PBXTargetDependency */,
+			);
+			name = OnigurumaTestUITests;
+			productName = OnigurumaTestUITests;
+			productReference = 2B8739B5299AC0D7009CEAEC /* OnigurumaTestUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2B873992299AC0D6009CEAEC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1420;
+				LastUpgradeCheck = 1420;
+				TargetAttributes = {
+					2B873999299AC0D6009CEAEC = {
+						CreatedOnToolsVersion = 14.2;
+					};
+					2B8739AA299AC0D7009CEAEC = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = 2B873999299AC0D6009CEAEC;
+					};
+					2B8739B4299AC0D7009CEAEC = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = 2B873999299AC0D6009CEAEC;
+					};
+				};
+			};
+			buildConfigurationList = 2B873995299AC0D6009CEAEC /* Build configuration list for PBXProject "OnigurumaTest" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 2B873991299AC0D6009CEAEC;
+			packageReferences = (
+				2B8739C8299AC119009CEAEC /* XCRemoteSwiftPackageReference "SwiftOniguruma" */,
+			);
+			productRefGroup = 2B87399B299AC0D6009CEAEC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2B873999299AC0D6009CEAEC /* OnigurumaTest */,
+				2B8739AA299AC0D7009CEAEC /* OnigurumaTestTests */,
+				2B8739B4299AC0D7009CEAEC /* OnigurumaTestUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2B873998299AC0D6009CEAEC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2B8739A2299AC0D7009CEAEC /* Assets.xcassets in Resources */,
+				2B8739A5299AC0D7009CEAEC /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2B8739A9299AC0D7009CEAEC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2B8739B3299AC0D7009CEAEC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2B873996299AC0D6009CEAEC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2B8739A0299AC0D6009CEAEC /* ViewController.swift in Sources */,
+				2B87399E299AC0D6009CEAEC /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2B8739A7299AC0D7009CEAEC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2B8739B0299AC0D7009CEAEC /* OnigurumaTestTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2B8739B1299AC0D7009CEAEC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2B8739BC299AC0D7009CEAEC /* OnigurumaTestUITestsLaunchTests.swift in Sources */,
+				2B8739BA299AC0D7009CEAEC /* OnigurumaTestUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2B8739AD299AC0D7009CEAEC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2B873999299AC0D6009CEAEC /* OnigurumaTest */;
+			targetProxy = 2B8739AC299AC0D7009CEAEC /* PBXContainerItemProxy */;
+		};
+		2B8739B7299AC0D7009CEAEC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2B873999299AC0D6009CEAEC /* OnigurumaTest */;
+			targetProxy = 2B8739B6299AC0D7009CEAEC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		2B8739A3299AC0D7009CEAEC /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2B8739A4299AC0D7009CEAEC /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		2B8739BD299AC0D7009CEAEC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 13.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		2B8739BE299AC0D7009CEAEC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 13.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		2B8739C0299AC0D7009CEAEC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = OnigurumaTest/OnigurumaTest.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 4V2D72S45C;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSMainStoryboardFile = Main;
+				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = nl.wesleydegroot.OnigurumaTest;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		2B8739C1299AC0D7009CEAEC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = OnigurumaTest/OnigurumaTest.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 4V2D72S45C;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSMainStoryboardFile = Main;
+				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = nl.wesleydegroot.OnigurumaTest;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		2B8739C3299AC0D7009CEAEC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 4V2D72S45C;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 13.1;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = nl.wesleydegroot.OnigurumaTestTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/OnigurumaTest.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/OnigurumaTest";
+			};
+			name = Debug;
+		};
+		2B8739C4299AC0D7009CEAEC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 4V2D72S45C;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 13.1;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = nl.wesleydegroot.OnigurumaTestTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/OnigurumaTest.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/OnigurumaTest";
+			};
+			name = Release;
+		};
+		2B8739C6299AC0D7009CEAEC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 4V2D72S45C;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = nl.wesleydegroot.OnigurumaTestUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = OnigurumaTest;
+			};
+			name = Debug;
+		};
+		2B8739C7299AC0D7009CEAEC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 4V2D72S45C;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = nl.wesleydegroot.OnigurumaTestUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = OnigurumaTest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2B873995299AC0D6009CEAEC /* Build configuration list for PBXProject "OnigurumaTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2B8739BD299AC0D7009CEAEC /* Debug */,
+				2B8739BE299AC0D7009CEAEC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2B8739BF299AC0D7009CEAEC /* Build configuration list for PBXNativeTarget "OnigurumaTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2B8739C0299AC0D7009CEAEC /* Debug */,
+				2B8739C1299AC0D7009CEAEC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2B8739C2299AC0D7009CEAEC /* Build configuration list for PBXNativeTarget "OnigurumaTestTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2B8739C3299AC0D7009CEAEC /* Debug */,
+				2B8739C4299AC0D7009CEAEC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2B8739C5299AC0D7009CEAEC /* Build configuration list for PBXNativeTarget "OnigurumaTestUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2B8739C6299AC0D7009CEAEC /* Debug */,
+				2B8739C7299AC0D7009CEAEC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		2B8739C8299AC119009CEAEC /* XCRemoteSwiftPackageReference "SwiftOniguruma" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/AuroraEditor/SwiftOniguruma";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		2B8739C9299AC119009CEAEC /* SwiftOniguruma */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2B8739C8299AC119009CEAEC /* XCRemoteSwiftPackageReference "SwiftOniguruma" */;
+			productName = SwiftOniguruma;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 2B873992299AC0D6009CEAEC /* Project object */;
+}
