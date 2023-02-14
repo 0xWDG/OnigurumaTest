@@ -64,7 +64,8 @@ class ViewController: NSViewController, NSTextViewDelegate {
         .init(regex: "func [a-zA-Z]+\\(.*\\)", color: .systemTeal), // Function (call)
         .init(regex: "// .*", color: .gray), // Single line Comment
         .init(regex: "\".*\"", color: .red), // String contents
-        .init(regex: "({|}|\\(|\\))", color: .blue) // Brackets
+        .init(regex: "({|}|\\(|\\))", color: .blue), // Brackets
+        .init(regex: "(@)(?<q>`?)[\\p{L}_][\\p{L}_\\p{N}\\p{M}]*(\\k<q>)", color: .brown)
     ];
 
     let swiftCode = """
