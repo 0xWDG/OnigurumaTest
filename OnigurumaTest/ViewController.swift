@@ -21,19 +21,55 @@ extension String {
     }
 }
 
+extension NSColor {
+    public func random() -> NSColor {
+        return [
+            NSColor.red, NSColor.blue, NSColor.orange
+        ].randomElement()!
+    }
+}
+struct Token {
+    var regex: String
+    var color: NSColor
+
+    var debugDescription: String {
+        switch color {
+        case .purple:
+            return "Token(\"\(regex)\", Purple)"
+        case .orange:
+            return "Token(\"\(regex)\", Orange)"
+        case .systemTeal:
+            return "Token(\"\(regex)\", System Teal)"
+        case .gray:
+            return "Token(\"\(regex)\", Grey)"
+        case .red:
+            return "Token(\"\(regex)\", Red)"
+        case .blue:
+            return "Token(\"\(regex)\", Blue)"
+        default:
+            return "Token(\"\(regex)\", \(color))"
+        }
+    }
+}
+
 class ViewController: NSViewController, NSTextViewDelegate {
     @IBOutlet weak var textViewCode: NSTextView!
     @IBOutlet weak var textViewOutput: NSTextView!
 
-    let tokens = [
-        "Foundation", "viewDidLoad\\(\\)",
-        "func", "super", "override", "NSViewController", "class",
-        "String", "try", "!", "SwiftOniguruma", "regex"
+    var isProcessing = false
+
+    let tokens: [Token] = [
+        .init(regex: "(weak|var|struct|class|try|return|override|super|import|didSet|Any)", color: .purple), // def.
+        .init(regex: "(String|NSTextView|NSColor)", color: .orange), // Types
+        .init(regex: "func [a-zA-Z]+\\(.*\\)", color: .systemTeal), // Function (call)
+        .init(regex: "// .*", color: .gray), // Single line Comment
+        .init(regex: "\".*\"", color: .red), // String contents
+        .init(regex: "({|}|\\(|\\))", color: .blue) // Brackets
     ];
 
     let swiftCode = """
 // Change me to see live results
-// in the other textview ->
+// in both text views.
 
 import Foundation
 
@@ -59,19 +95,25 @@ class VC: NSViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        textViewCode.string += swiftCode
+        textViewCode.textStorage?.setAttributedString(NSAttributedString(string: swiftCode))
         textViewCode.delegate = self
 
         reprocess()
     }
 
     func reprocess() {
+        if isProcessing {
+            return
+        }
+
+        isProcessing = true
         textViewOutput.string = ""
         textViewOutput.string += "Loaded Oniguruma version " + SwiftOniguruma.version() + "\r\n\r\n"
-        textViewOutput.string += "Tokens: \"\(tokens.joined(separator: "\", \""))\".\r\n\r\n"
+        textViewOutput.string += "Tokens:\r\n- \(tokens.map({$0.debugDescription}).joined(separator: ",\r\n- ")))\".\r\n\r\n"
 
-        for word in tokens {
-            for match in match(regex: word) {
+
+        for token in tokens {
+            for match in match(regex: token.regex) {
 
                 textViewOutput.string += "Matched \"\(match.string!)\" " +
                                          "@ Range \(match.range), Test:" +
@@ -79,8 +121,18 @@ class VC: NSViewController {
                     match.range.lowerBound,
                     end: match.range.upperBound - 1
                 ) + "\r\n"
+
+                textViewCode.textStorage?.addAttributes(
+                    [NSAttributedString.Key.foregroundColor: token.color],
+                    range: NSRange(
+                        location: match.range.lowerBound,
+                        length: (match.range.upperBound) - match.range.lowerBound
+                    )
+                )
             }
         }
+
+        isProcessing = false
     }
 
     func match(regex: String) -> [Region] {
