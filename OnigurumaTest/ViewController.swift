@@ -75,6 +75,8 @@ class ViewController: NSViewController, NSTextViewDelegate {
 import Foundation
 
 class VC: NSViewController {
+    @IBOutlet weak var textViewCode: NSTextView!
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -83,7 +85,7 @@ class VC: NSViewController {
 
     func match(regex: String) -> [Region] {
         let regex = try! SwiftOniguruma.Regex(pattern: regex)
-        return try! regex.matches(in: swiftCode, of: 0...)
+        return try! regex.matches(in: textViewCode.string, of: 0...)
     }
 
     override var representedObject: Any? {
