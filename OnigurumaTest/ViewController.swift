@@ -155,65 +155,6 @@ class ViewController: NSViewController, NSTextViewDelegate {
                         }
                     }
                 }
-
-                //
-                //            for match in match(regex: token.start) {
-                //
-                //                textViewOutput.string += "Matched \"\(match.string!)\" " +
-                //                                         "@ Range \(match.range), Test:" +
-                //                textViewCode.string.substring(
-                //                    match.range.lowerBound,
-                //                    end: match.range.upperBound - 1
-                //                ) + "\r\n"
-                //
-                //                textViewCode.textStorage?.addAttributes(
-                //                    [NSAttributedString.Key.foregroundColor: token.color],
-                //                    range: NSRange(
-                //                        location: match.range.lowerBound,
-                //                        length: (match.range.upperBound) - match.range.lowerBound
-                //                    )
-                //                )
-                //            }
-                //
-                //            if let middle = token.middle {
-                //                for match in match(regex: middle[0]) {
-                //
-                //                    textViewOutput.string += "Matched \"\(match.string!)\" " +
-                //                                             "@ Range \(match.range), Test:" +
-                //                    textViewCode.string.substring(
-                //                        match.range.lowerBound,
-                //                        end: match.range.upperBound - 1
-                //                    ) + "\r\n"
-                //
-                //                    textViewCode.textStorage?.addAttributes(
-                //                        [NSAttributedString.Key.foregroundColor: token.color],
-                //                        range: NSRange(
-                //                            location: match.range.lowerBound,
-                //                            length: (match.range.upperBound) - match.range.lowerBound
-                //                        )
-                //                    )
-                //                }
-                //            }
-                //
-                //            if let end = token.end {
-                //                for match in match(regex: end) {
-                //
-                //                    textViewOutput.string += "Matched \"\(match.string!)\" " +
-                //                                             "@ Range \(match.range), Test:" +
-                //                    textViewCode.string.substring(
-                //                        match.range.lowerBound,
-                //                        end: match.range.upperBound - 1
-                //                    ) + "\r\n"
-                //
-                //                    textViewCode.textStorage?.addAttributes(
-                //                        [NSAttributedString.Key.foregroundColor: token.color],
-                //                        range: NSRange(
-                //                            location: match.range.lowerBound,
-                //                            length: (match.range.upperBound) - match.range.lowerBound
-                //                        )
-                //                    )
-                //                }
-                //            }
             }
         }
 
