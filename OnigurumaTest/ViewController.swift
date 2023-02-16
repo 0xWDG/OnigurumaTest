@@ -8,33 +8,6 @@
 import Cocoa
 import SwiftOniguruma
 
-struct Token {
-    var start: String
-    var middle: [String]?
-    var end: String?
-
-    var color: NSColor
-
-    var debugDescription: String {
-        switch color {
-        case .purple:
-            return "Token(\"\(start)\", Purple)"
-        case .orange:
-            return "Token(\"\(start)\", Orange)"
-        case .systemTeal:
-            return "Token(\"\(start)\", System Teal)"
-        case .gray:
-            return "Token(\"\(start)\", Grey)"
-        case .red:
-            return "Token(\"\(start)\", Red)"
-        case .blue:
-            return "Token(\"\(start)\", Blue)"
-        default:
-            return "Token(\"\(start)\", \(color))"
-        }
-    }
-}
-
 class ViewController: NSViewController, NSTextViewDelegate {
     @IBOutlet weak var textViewCode: NSTextView!
     @IBOutlet weak var textViewOutput: NSTextView!
@@ -123,6 +96,9 @@ class ViewController: NSViewController, NSTextViewDelegate {
                                 end: match.range.upperBound - 1
                             )
                         ) {
+                            // Middle token, This uses the matched string (match), and work with that.
+                            // To manipulate the textview, be sure to use the match.range.lowerBound.
+                            // Calculate length with match.range.lowerBound + middleMatch
                             textViewOutput.string += "Middle Matched \"\(middleMatch.string!)\" " +
                             "@ Range \(middleMatch.range), Test:" +
                             textViewCode.string.substring(
