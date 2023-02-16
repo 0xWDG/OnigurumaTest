@@ -8,26 +8,6 @@
 import Cocoa
 import SwiftOniguruma
 
-extension String {
-    /// Substring
-    /// - Parameters:
-    ///   - start: start
-    ///   - end: end
-    /// - Returns: subscripted string (int+int)
-    func substring(_ start: Int, end: Int) -> String {
-        let startIndex = self.index(self.startIndex, offsetBy: start)
-        let endIndex = self.index(self.startIndex, offsetBy: end)
-        return String(self[startIndex...endIndex])
-    }
-}
-
-extension NSColor {
-    public func random() -> NSColor {
-        return [
-            NSColor.red, NSColor.blue, NSColor.orange
-        ].randomElement()!
-    }
-}
 struct Token {
     var start: String
     var middle: [String]?
@@ -136,22 +116,27 @@ class ViewController: NSViewController, NSTextViewDelegate {
 
                 if let middle = token.middle {
                     for currentToken in middle {
-                        for match in self.match(regex: currentToken) {
-                            textViewOutput.string += "Matched \"\(match.string!)\" " +
-                            "@ Range \(match.range), Test:" +
-                            textViewCode.string.substring(
+                        for middleMatch in self.match(
+                            regex: currentToken,
+                            string: textViewCode.string.substring(
                                 match.range.lowerBound,
                                 end: match.range.upperBound - 1
+                            )
+                        ) {
+                            textViewOutput.string += "Middle Matched \"\(middleMatch.string!)\" " +
+                            "@ Range \(middleMatch.range), Test:" +
+                            textViewCode.string.substring(
+                                match.range.lowerBound + middleMatch.range.lowerBound,
+                                end: match.range.lowerBound + middleMatch.range.upperBound - 1
                             ) + "\r\n"
 
                             textViewCode.textStorage?.addAttributes(
                                 [NSAttributedString.Key.foregroundColor: NSColor.red],
                                 range: NSRange(
-                                    location: match.range.lowerBound,
-                                    length: (match.range.upperBound) - match.range.lowerBound
+                                    location: match.range.lowerBound + middleMatch.range.lowerBound,
+                                    length: (middleMatch.range.upperBound) - middleMatch.range.lowerBound
                                 )
                             )
-
                         }
                     }
                 }
@@ -161,9 +146,12 @@ class ViewController: NSViewController, NSTextViewDelegate {
         isProcessing = false
     }
 
-    func match(regex: String) -> [Region] {
+    func match(regex: String, string: String = "") -> [Region] {
         let regex = try! SwiftOniguruma.Regex(pattern: regex)
-        return try! regex.matches(in: textViewCode.string, of: 0...)
+        return try! regex.matches(
+            in: (string == "" ? textViewCode.string : string),
+            of: 0...
+        )
     }
 
     override var representedObject: Any? {
