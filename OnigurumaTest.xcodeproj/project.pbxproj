@@ -96,7 +96,7 @@
 				2B208068299ECA6A00CDBFA8 /* TextMateDeclaration.swift */,
 				2B208066299ECA3C00CDBFA8 /* Token.swift */,
 			);
-			path = Models;
+			name = Models;
 			sourceTree = "<group>";
 		};
 		2B873991299AC0D6009CEAEC = {
@@ -159,7 +159,7 @@
 				2B20805F299EC47F00CDBFA8 /* swift.tmLanguage.json */,
 				2B20805E299EC47F00CDBFA8 /* TestCode.txt */,
 			);
-			path = Assets;
+			name = Assets;
 			sourceTree = "<group>";
 		};
 		2B8739D9299EC3C7009CEAEC /* Extensions */ = {
