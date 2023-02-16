@@ -15,6 +15,8 @@
 		2B8739BA299AC0D7009CEAEC /* OnigurumaTestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B8739B9299AC0D7009CEAEC /* OnigurumaTestUITests.swift */; };
 		2B8739BC299AC0D7009CEAEC /* OnigurumaTestUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B8739BB299AC0D7009CEAEC /* OnigurumaTestUITestsLaunchTests.swift */; };
 		2B8739CA299AC119009CEAEC /* SwiftOniguruma in Frameworks */ = {isa = PBXBuildFile; productRef = 2B8739C9299AC119009CEAEC /* SwiftOniguruma */; };
+		2B8739CC299EB424009CEAEC /* TextMateLanguage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B8739CB299EB424009CEAEC /* TextMateLanguage.swift */; };
+		2B8739CE299EBB2D009CEAEC /* TextMateDeclaration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B8739CD299EBB2D009CEAEC /* TextMateDeclaration.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +48,8 @@
 		2B8739B5299AC0D7009CEAEC /* OnigurumaTestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OnigurumaTestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B8739B9299AC0D7009CEAEC /* OnigurumaTestUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnigurumaTestUITests.swift; sourceTree = "<group>"; };
 		2B8739BB299AC0D7009CEAEC /* OnigurumaTestUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnigurumaTestUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		2B8739CB299EB424009CEAEC /* TextMateLanguage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextMateLanguage.swift; sourceTree = "<group>"; };
+		2B8739CD299EBB2D009CEAEC /* TextMateDeclaration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextMateDeclaration.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +103,8 @@
 			children = (
 				2B87399D299AC0D6009CEAEC /* AppDelegate.swift */,
 				2B87399F299AC0D6009CEAEC /* ViewController.swift */,
+				2B8739CB299EB424009CEAEC /* TextMateLanguage.swift */,
+				2B8739CD299EBB2D009CEAEC /* TextMateDeclaration.swift */,
 				2B8739A1299AC0D7009CEAEC /* Assets.xcassets */,
 				2B8739A3299AC0D7009CEAEC /* Main.storyboard */,
 				2B8739A6299AC0D7009CEAEC /* OnigurumaTest.entitlements */,
@@ -261,6 +267,8 @@
 			files = (
 				2B8739A0299AC0D6009CEAEC /* ViewController.swift in Sources */,
 				2B87399E299AC0D6009CEAEC /* AppDelegate.swift in Sources */,
+				2B8739CE299EBB2D009CEAEC /* TextMateDeclaration.swift in Sources */,
+				2B8739CC299EB424009CEAEC /* TextMateLanguage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

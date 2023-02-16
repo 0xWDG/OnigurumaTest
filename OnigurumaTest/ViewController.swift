@@ -29,25 +29,28 @@ extension NSColor {
     }
 }
 struct Token {
-    var regex: String
+    var start: String
+    var middle: [String]?
+    var end: String?
+
     var color: NSColor
 
     var debugDescription: String {
         switch color {
         case .purple:
-            return "Token(\"\(regex)\", Purple)"
+            return "Token(\"\(start)\", Purple)"
         case .orange:
-            return "Token(\"\(regex)\", Orange)"
+            return "Token(\"\(start)\", Orange)"
         case .systemTeal:
-            return "Token(\"\(regex)\", System Teal)"
+            return "Token(\"\(start)\", System Teal)"
         case .gray:
-            return "Token(\"\(regex)\", Grey)"
+            return "Token(\"\(start)\", Grey)"
         case .red:
-            return "Token(\"\(regex)\", Red)"
+            return "Token(\"\(start)\", Red)"
         case .blue:
-            return "Token(\"\(regex)\", Blue)"
+            return "Token(\"\(start)\", Blue)"
         default:
-            return "Token(\"\(regex)\", \(color))"
+            return "Token(\"\(start)\", \(color))"
         }
     }
 }
@@ -59,13 +62,26 @@ class ViewController: NSViewController, NSTextViewDelegate {
     var isProcessing = false
 
     let tokens: [Token] = [
-        .init(regex: "(weak|var|struct|class|try|return|override|super|import|didSet|Any)", color: .purple), // def.
-        .init(regex: "(String|NSTextView|NSColor)", color: .orange), // Types
-        .init(regex: "func [a-zA-Z]+\\(.*\\)", color: .systemTeal), // Function (call)
-        .init(regex: "// .*", color: .gray), // Single line Comment
-        .init(regex: "\".*\"", color: .red), // String contents
-        .init(regex: "({|}|\\(|\\))", color: .blue), // Brackets
-        .init(regex: "(@)(?<q>`?)[\\p{L}_][\\p{L}_\\p{N}\\p{M}]*(\\k<q>)", color: .brown)
+        .init(start: "(weak|var|struct|class|try|return|override|super|import|didSet|Any)", color: .purple), // def.
+        .init(start: "(String|NSTextView|NSColor)", color: .orange), // Types
+        .init(start: "func [a-zA-Z]+\\(.*\\)", color: .systemTeal), // Function (call)
+        .init(start: "// .*", color: .gray), // Single line Comment
+        .init(start: "\".*\"", color: .red), // String contents
+        .init(start: "({|}|\\(|\\))", color: .blue), // Brackets
+        .init(start: "(@)(?<q>`?)[\\p{L}_][\\p{L}_\\p{N}\\p{M}]*(\\k<q>)", color: .brown),
+
+        // TextMate regular expression
+            .init(
+                start: "((@)available)(\\()",
+                middle: [
+                    "\\b(swift|(?:iOS|macOS|OSX|watchOS|tvOS|UIKitForMac)(?:ApplicationExtension)?)\\b(?:\\s+([0-9]+(?:\\.[0-9]+)*\\b))?",
+                    "\\b(introduced|deprecated|obsoleted)\\s*(:)\\s*(?!\\G)",
+                    "\\b(message|renamed)\\s*(:)\\s*(?=\")(?!\\G)",
+                    "(?:(\\*)|\\b(deprecated|unavailable|noasync)\\b)\\s*(.*?)(?=[,)])"
+                ],
+                end: "\\)",
+                color: .green
+            )
     ];
 
     let swiftCode = """
@@ -93,6 +109,11 @@ class VC: NSViewController {
             // Update the view, if already loaded.
         }
     }
+
+    @available(iOS, *)
+    func optionalFunc() {
+        return false
+    }
 }
 """
 
@@ -116,10 +137,11 @@ class VC: NSViewController {
 
 
         for token in tokens {
-            for match in match(regex: token.regex) {
-
+            for match in match(
+                regex: token.start + ".*" + (token.end ?? "")
+            ) {
                 textViewOutput.string += "Matched \"\(match.string!)\" " +
-                                         "@ Range \(match.range), Test:" +
+                "@ Range \(match.range), Test:" +
                 textViewCode.string.substring(
                     match.range.lowerBound,
                     end: match.range.upperBound - 1
@@ -132,6 +154,87 @@ class VC: NSViewController {
                         length: (match.range.upperBound) - match.range.lowerBound
                     )
                 )
+
+                if let middle = token.middle {
+                    for currentToken in middle {
+                        for match in self.match(regex: currentToken) {
+                            textViewOutput.string += "Matched \"\(match.string!)\" " +
+                            "@ Range \(match.range), Test:" +
+                            textViewCode.string.substring(
+                                match.range.lowerBound,
+                                end: match.range.upperBound - 1
+                            ) + "\r\n"
+
+                            textViewCode.textStorage?.addAttributes(
+                                [NSAttributedString.Key.foregroundColor: NSColor.red],
+                                range: NSRange(
+                                    location: match.range.lowerBound,
+                                    length: (match.range.upperBound) - match.range.lowerBound
+                                )
+                            )
+
+                        }
+                    }
+                }
+
+                //
+                //            for match in match(regex: token.start) {
+                //
+                //                textViewOutput.string += "Matched \"\(match.string!)\" " +
+                //                                         "@ Range \(match.range), Test:" +
+                //                textViewCode.string.substring(
+                //                    match.range.lowerBound,
+                //                    end: match.range.upperBound - 1
+                //                ) + "\r\n"
+                //
+                //                textViewCode.textStorage?.addAttributes(
+                //                    [NSAttributedString.Key.foregroundColor: token.color],
+                //                    range: NSRange(
+                //                        location: match.range.lowerBound,
+                //                        length: (match.range.upperBound) - match.range.lowerBound
+                //                    )
+                //                )
+                //            }
+                //
+                //            if let middle = token.middle {
+                //                for match in match(regex: middle[0]) {
+                //
+                //                    textViewOutput.string += "Matched \"\(match.string!)\" " +
+                //                                             "@ Range \(match.range), Test:" +
+                //                    textViewCode.string.substring(
+                //                        match.range.lowerBound,
+                //                        end: match.range.upperBound - 1
+                //                    ) + "\r\n"
+                //
+                //                    textViewCode.textStorage?.addAttributes(
+                //                        [NSAttributedString.Key.foregroundColor: token.color],
+                //                        range: NSRange(
+                //                            location: match.range.lowerBound,
+                //                            length: (match.range.upperBound) - match.range.lowerBound
+                //                        )
+                //                    )
+                //                }
+                //            }
+                //
+                //            if let end = token.end {
+                //                for match in match(regex: end) {
+                //
+                //                    textViewOutput.string += "Matched \"\(match.string!)\" " +
+                //                                             "@ Range \(match.range), Test:" +
+                //                    textViewCode.string.substring(
+                //                        match.range.lowerBound,
+                //                        end: match.range.upperBound - 1
+                //                    ) + "\r\n"
+                //
+                //                    textViewCode.textStorage?.addAttributes(
+                //                        [NSAttributedString.Key.foregroundColor: token.color],
+                //                        range: NSRange(
+                //                            location: match.range.lowerBound,
+                //                            length: (match.range.upperBound) - match.range.lowerBound
+                //                        )
+                //                    )
+                //                }
+                //            }
             }
         }
 
