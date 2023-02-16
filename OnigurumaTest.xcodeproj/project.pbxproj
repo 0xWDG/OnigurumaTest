@@ -17,6 +17,9 @@
 		2B8739CA299AC119009CEAEC /* SwiftOniguruma in Frameworks */ = {isa = PBXBuildFile; productRef = 2B8739C9299AC119009CEAEC /* SwiftOniguruma */; };
 		2B8739CC299EB424009CEAEC /* TextMateLanguage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B8739CB299EB424009CEAEC /* TextMateLanguage.swift */; };
 		2B8739CE299EBB2D009CEAEC /* TextMateDeclaration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B8739CD299EBB2D009CEAEC /* TextMateDeclaration.swift */; };
+		2B8739D4299EC060009CEAEC /* php.tmLanguage.json in Resources */ = {isa = PBXBuildFile; fileRef = 2B8739D2299EC060009CEAEC /* php.tmLanguage.json */; };
+		2B8739D5299EC060009CEAEC /* swift.tmLanguage.json in Resources */ = {isa = PBXBuildFile; fileRef = 2B8739D3299EC060009CEAEC /* swift.tmLanguage.json */; };
+		2B8739D7299EC256009CEAEC /* TestCode.txt in Resources */ = {isa = PBXBuildFile; fileRef = 2B8739CF299EBF88009CEAEC /* TestCode.txt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +53,9 @@
 		2B8739BB299AC0D7009CEAEC /* OnigurumaTestUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnigurumaTestUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		2B8739CB299EB424009CEAEC /* TextMateLanguage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextMateLanguage.swift; sourceTree = "<group>"; };
 		2B8739CD299EBB2D009CEAEC /* TextMateDeclaration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextMateDeclaration.swift; sourceTree = "<group>"; };
+		2B8739CF299EBF88009CEAEC /* TestCode.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = TestCode.txt; sourceTree = "<group>"; };
+		2B8739D2299EC060009CEAEC /* php.tmLanguage.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = php.tmLanguage.json; sourceTree = "<group>"; };
+		2B8739D3299EC060009CEAEC /* swift.tmLanguage.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = swift.tmLanguage.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,7 +111,10 @@
 				2B87399F299AC0D6009CEAEC /* ViewController.swift */,
 				2B8739CB299EB424009CEAEC /* TextMateLanguage.swift */,
 				2B8739CD299EBB2D009CEAEC /* TextMateDeclaration.swift */,
+				2B8739CF299EBF88009CEAEC /* TestCode.txt */,
 				2B8739A1299AC0D7009CEAEC /* Assets.xcassets */,
+				2B8739D2299EC060009CEAEC /* php.tmLanguage.json */,
+				2B8739D3299EC060009CEAEC /* swift.tmLanguage.json */,
 				2B8739A3299AC0D7009CEAEC /* Main.storyboard */,
 				2B8739A6299AC0D7009CEAEC /* OnigurumaTest.entitlements */,
 			);
@@ -239,7 +248,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2B8739D7299EC256009CEAEC /* TestCode.txt in Resources */,
+				2B8739D5299EC060009CEAEC /* swift.tmLanguage.json in Resources */,
 				2B8739A2299AC0D7009CEAEC /* Assets.xcassets in Resources */,
+				2B8739D4299EC060009CEAEC /* php.tmLanguage.json in Resources */,
 				2B8739A5299AC0D7009CEAEC /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

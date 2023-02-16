@@ -84,42 +84,21 @@ class ViewController: NSViewController, NSTextViewDelegate {
             )
     ];
 
-    let swiftCode = """
-// Change me to see live results
-// in both text views.
-
-import Foundation
-
-class VC: NSViewController {
-    @IBOutlet weak var textViewCode: NSTextView!
+    let swiftCode = try! String(
+        contentsOf: Bundle.main.url(
+            forResource: "TestCode",
+            withExtension: "txt"
+        )!
+    )
 
     override func viewDidLoad() {
+
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
-    }
+        textViewCode.textStorage?.setAttributedString(
+            NSAttributedString(string: swiftCode)
+        )
 
-    func match(regex: String) -> [Region] {
-        let regex = try! SwiftOniguruma.Regex(pattern: regex)
-        return try! regex.matches(in: textViewCode.string, of: 0...)
-    }
-
-    override var representedObject: Any? {
-        didSet {
-            // Update the view, if already loaded.
-        }
-    }
-
-    @available(iOS, *)
-    func optionalFunc() {
-        return false
-    }
-}
-"""
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        textViewCode.textStorage?.setAttributedString(NSAttributedString(string: swiftCode))
         textViewCode.delegate = self
 
         reprocess()

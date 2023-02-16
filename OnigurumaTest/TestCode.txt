@@ -1,0 +1,38 @@
+//
+//  TestCode.swift
+//  OnigurumaTest
+//
+//  Created by Wesley de Groot on 16/02/2023.
+//
+// Change me to see live results
+// in both text views.
+
+import Cocoa
+import SwiftOniguruma
+
+class TestCodeView: NSViewController {
+    @IBOutlet weak var textViewCode: NSTextView!
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
+        // Do any additional setup after loading the view.
+    }
+
+    func match(regex: String) -> [Region] {
+        let regex = try! SwiftOniguruma.Regex(pattern: regex)
+        return try! regex.matches(in: textViewCode.string, of: 0...)
+    }
+
+    override var representedObject: Any? {
+        didSet {
+            // Update the view, if already loaded.
+        }
+    }
+
+    @available(macOS 10.15, iOS 13, watchOS 6, tvOS 13, *)
+    func optionalFunc() -> Bool {
+        return false
+    }
+}
+
