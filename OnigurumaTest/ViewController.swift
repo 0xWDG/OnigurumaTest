@@ -18,7 +18,7 @@ class ViewController: NSViewController, NSTextViewDelegate {
         .init(start: "(weak|var|struct|class|try|return|override|super|import|didSet|Any)", color: .purple), // def.
         .init(start: "(String|NSTextView|NSColor)", color: .orange), // Types
         .init(start: "func [a-zA-Z]+\\(.*\\)", color: .systemTeal), // Function (call)
-        .init(start: "// .*", color: .gray), // Single line Comment
+        .init(start: "//.*", color: .gray), // Single line Comment
         .init(start: "\".*\"", color: .red), // String contents
         .init(start: "({|}|\\(|\\))", color: .blue), // Brackets
         .init(start: "(@)(?<q>`?)[\\p{L}_][\\p{L}_\\p{N}\\p{M}]*(\\k<q>)", color: .brown),
