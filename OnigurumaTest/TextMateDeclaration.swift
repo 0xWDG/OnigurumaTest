@@ -6,12 +6,17 @@
 //
 
 import Foundation
-//
-//struct TextMateFile {
-//    var repository: TMRepositoryItem
-//}
-//
-//struct TMRepositoryItem {
-//    var captures:
-//    var match: String
-//}
+
+struct TextMateFile: Codable {
+    var information_for_contributors: [String]
+    var name: String
+    var patterns: [[String: String]]
+    var scopeName: String
+    var version: String
+//    var repository: Any
+}
+
+struct TMRepositoryItem {
+    var captures: [String]
+    var match: String
+}

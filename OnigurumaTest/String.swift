@@ -18,7 +18,7 @@ extension String {
         let endIndex = self.index(self.startIndex, offsetBy: end)
         if startIndex > endIndex {
             print("Index \(start) > \(end)")
-            return self
+            return String(self[startIndex...])
         }
         return String(self[startIndex...endIndex])
     }
