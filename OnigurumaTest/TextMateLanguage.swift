@@ -8,7 +8,7 @@
 import Foundation
 
 class TextMateLanguage {
-    var language: TextMateFile?
+    var language: TextMateJSON?
 
     private var rawData: Data?
     private var dict: [String: Any] = [:]
@@ -23,17 +23,22 @@ class TextMateLanguage {
             )
 
             guard let rawData = rawData,
+                  var universal = try? JSONSerialization.jsonObject(
+                    with: rawData, options: .mutableContainers
+                  ) as? [String: Any],
                   let dict = try JSONSerialization.jsonObject(
                     with: rawData, options: .mutableContainers) as? [String: Any] else {
                 fatalError("invalid Json")
             }
 
-            self.language = try JSONDecoder().decode(TextMateFile.self, from: rawData)
+
+            self.language = try JSONDecoder().decode(TextMateJSON.self, from: rawData)
 
 //            print(dict)
 //            print("-----")
-//            print("tmf = ", self.language)
-            
+            print("tmf = ", self.language)
+//            print("tmu = ", universal)
+
         }
         catch {
             print(error)
